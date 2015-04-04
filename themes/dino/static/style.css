@@ -1,0 +1,446 @@
+/*
+    Theme Name: Certified Edible Dinosaurs
+    Theme URI: http://ced.pwned.systems
+    Description: CED Wordpress Theme
+    Version: 1.4.3
+    Author: Sander Ferdinand (@skftn)
+    Author URI: http://ced.pwned.systems
+    Tags: CED
+
+    License: MIT
+    License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+/* html element 62.5% font-size for REM use */
+html {
+    font-size:62.5%;
+    overflow:auto;
+    min-height: 100%;
+    display: block;
+}
+
+body {
+    font:300 16px/1 'Inconsolata', Helvetica, Arial, sans-serif;
+    color:white;
+    margin:0;
+    background: -webkit-linear-gradient(#2A003F, #401d61); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2A003F, #401d61); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2A003F, #401d61); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2A003F, #401d61); /* Standard syntax */
+    min-height: 100%;
+    display: block;
+    overflow: auto;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+
+img {
+    max-width:100%;
+    vertical-align:bottom;
+}
+
+a {
+    color: rgb(255, 232, 0);
+    text-decoration:none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration:underline;
+}
+a:focus {
+	outline:0;
+}
+a:hover, a:active {
+    outline:0;
+}
+
+input:focus {
+    outline:0;
+    border:1px solid #04A4CC;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+    overflow: hidden;
+}
+
+/* header */
+.header {
+    margin-top:90px;
+}
+
+/* sidebar */
+aside {
+	float: left;
+	width: 268px;
+	margin-top: 10px;
+	background-color: black;
+	padding: 10px;
+	padding-top: 20px;
+	border-radius: 6px;
+}
+
+/* footer */
+.footer {
+	float:left;
+}
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+/*------------------------------------*\
+    CED
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5 {
+    margin:0;
+}
+
+a:hover {
+    color:white;
+}
+
+main {
+    width: 800px;
+    margin: 10px 20px 10px 0;
+    padding: 30px 40px 10px;
+    border-radius: 4px;
+    float: left;
+    background: black url('img/container_pixel.png');
+}
+
+#page-header {
+    padding:40px;
+    font-size: 12px;
+    font-family: sans-serif;
+    height:80px;
+    text-decoration: none;
+    color:white;
+}
+
+#page-header a {
+    color: white;
+}
+
+.yellow {
+	color: rgb(255, 232, 0);
+}
+
+footer>p {
+    margin-left: 40px;
+    font-size: 13px;
+}
+
+pre {
+    font-size: 14px;
+    margin: 0;
+}
+
+.highlight {
+    border-radius: 6px;
+    padding: 0.75em 1em;
+    margin: 1em 0em;
+}
+
+section>h1 {
+    float: right;
+    font-size: 14px;
+}
+
+article {
+	font-size: 15px;
+}
+
+article>header {
+	padding-bottom: 40px;
+}
+
+article>header .glyphicon {
+	float: right;
+	font-size: 42px;
+	color: rgb(255, 232, 0);
+}
+
+article.index>header .glyphicon {
+    float: left;
+    font-size: 36px;
+}
+
+article>header .title {
+    font-size:28px;
+    margin-top:4px;
+    margin-bottom: 4px;
+}
+
+article.index>header .title {
+	font-size:22px;
+	margin-top:2px;
+	padding-left:48px;
+}
+
+article>header time {
+    display: block;
+	color: rgb(255, 232, 0);
+	-webkit-font-smoothing: antialiased;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+article.index>header time {
+	padding-left:48px;
+	font-size: 12px;
+}
+
+article>header .category {
+    color: rgb(255, 232, 0);
+    -webkit-font-smoothing: antialiased;
+    font-family: sans-serif;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+article.index>header .category {
+    margin-top: 4px;
+    margin-left: 48px;
+    font-size: 12px;
+}
+
+article.index>header>.title>a {
+	color:white;
+}
+
+aside>section {
+    margin-bottom: 30px;
+}
+
+aside>section>header {
+    font-size: 1.17em;
+    font-weight: bold;
+    color: rgb(255, 232, 0);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+aside>section.ctf {
+    padding: 20px;
+}
+
+aside>section.ctf>header {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+aside>section.ctf a {
+	color: rgb(255, 232, 0);
+	font-size:16px;
+	text-decoration: underline;
+}
+
+aside>section.ctf img {
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+aside>section.ctf ul, aside>section.ctf li {
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+
+aside a{
+	color:white;
+}
+
+/* Background */
+
+div.img_front {
+	width: 100%;
+	height: 480px;
+	background-image: url('img/footer_roofs_front.png');
+	background-repeat: repeat-x;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+div.img_middle {
+	width: 100%;
+	height: 480px;
+	background-image: url('img/footer_roofs_middle.png');
+	background-repeat: repeat-x;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -2;
+}
+
+div.bg_main {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1337;
+}

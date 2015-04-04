@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block head %}
+    {{ super() }}
+    {% for keyword in article.keywords %}
+        <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+        <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+        <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+<article class="article">
+    <header>
+        {% if 'ctf' in article.tags %}
+        <span class="glyphicon glyphicon-flag"></span>
+        {% else %}
+        <span class="glyphicon glyphicon-globe"></span>
+        {% endif %}
+        <time>{{ article.locale_date }}</time>
+        <div class="title">
+            {% if 'ctf' in article.tags %}
+            Write-up:
+            {% endif %}
+            {{ article.title }}
+        </div>
+        <div class="category">
+            <a href="{{ SITEURL }}/{{ article.category.url }}">
+                {{ article.category.name }}
+            </a>
+        </div>
+    </header>
+
+    <div class="entry-content">
+        {{ article.content }}
+    </div>
+
+</article>
+{% endblock %}
+
+{% block sidebar %}
+{% if 'ctf' in article.tags %}
+    <section class="ctf">
+        <header>
+            <span class="glyphicon glyphicon-tower"></span>
+            {{ article.category.name }}
+        </header>
+
+        {% if CATEGORY_THUMBNAILS.get(article.category.slug) %}
+        <p><img src="{{ SITEURL }}/theme/{{ CATEGORY_THUMBNAILS[article.category.slug] }}"
+                class="sidebar_thumbnail"
+                alt="{{ article.category.name }}"/></p>
+        {% endif %}
+
+        <h4>Write-ups:</h4>
+        <ul>
+            {% for a in articles %}
+                {% if a.category == article.category %}
+                <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </section>
+{% else %}
+    {{ super() }}
+{% endif %}
+{% endblock sidebar %}

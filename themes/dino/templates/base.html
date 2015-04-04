@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Cousine' media='all' />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Inconsolata' media='all' />
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css' media='all' />
+    <link rel='stylesheet' href="{{ SITEURL }}/theme/style.css" media='all' />
+    <link rel='stylesheet' href="{{ SITEURL }}/theme/pygment.css" media='all' />
+
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+    {% endif %}
+    {% endblock head %}
+</head>
+
+<body id="index" class="home">
+    <div class="wrapper">
+        <div id="page-header"><a href="{{ SITEURL }}/">{{ SITENAME.upper() }}</a></div>
+
+        <main role="main">
+            <section id="content">
+                {% block content %}
+                {% endblock %}
+            </section>
+        </main>
+
+        <aside class="sidebar" role="complementary">
+            {% block sidebar %}
+            <section class="menu">
+                <header>{MENU}</header>
+                <ul>
+                    {% for p in PAGES %}
+                    <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="links">
+                <header>{LINKS}</header>
+                <ul>
+                    {% for title, url in LINKS %}
+                    <li><a href="{{ url }}">{{ title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="categories">
+                <header>{CTFS}</header>
+                <ul>
+                    {% for cat, null in categories %}
+                    <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            {% endblock %}
+        </aside>
+
+        <div class="clear"></div>
+
+        <footer class="footer" role="contentinfo">
+            <p>
+                &copy; 2015 o/ ced. Powered by <a href="http://getpelican.com/">Pelican</a>.
+                <small>(please don't hack us)</small>.
+            </p>
+        </footer>
+
+    </div>
+
+    <div class="bg_main">
+        <div class="img_front"></div>
+        <div class="img_middle"></div>
+    </div>
+</body>
+</html>

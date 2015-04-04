@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }}{%endblock%}
+{% block content %}
+<article class="page">
+    <header>
+        <span class="glyphicon glyphicon-globe"></span>
+        <time>{{ page.locale_date }}</time>
+        <div class="title">
+            {{ page.title }}
+        </div>
+    </header>
+
+    <div class="entry-content">
+        {{ page.content }}
+    </div>
+    <br class="clear"/>
+</article>
+{% endblock %}
