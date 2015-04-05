@@ -15,6 +15,8 @@ Tags: CTF
 > source code before they further locked down the platform. Luckily the login
 > frontend still seems to be reachable.
 
+Download the source code: [frontend.tar.gz]({filename}/downloads/hitb-2015-teaser-ctf/frontend.tar.gz).
+
 ## Logging in
 
 We're presented with the source code of the front end and a link to the login page of the SATCOM system.

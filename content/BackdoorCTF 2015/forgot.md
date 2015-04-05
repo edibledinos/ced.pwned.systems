@@ -10,6 +10,8 @@ Tags: CTF
 
 > Recently, Lua started to annoy Fawkes. To this, Fawkes, challenged Lua to a battle of wits. Fawkes promised to reward Lua, only if she manages to transition to a non-reachable state in the FSA he implemented. The replication can be accessed here.
 
+Download the binary: [forgot]({filename}/downloads/backdoorctf-2015/forgot).
+
 Not going to spend too much time on this write-up, it's rather simple really.
 
 ## Analysis

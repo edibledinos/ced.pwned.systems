@@ -19,6 +19,8 @@ This is a write-up of the pwn1000 challenge (candypop) of the HITB 2015 Teaser C
 > manufacturer (that is now defunct) of the vending machine to send us a copy of
 > a binary.. but we can't make heads or tails out of it. HELP!
 
+Download the binary: [candypop]({filename}/downloads/hitb-2015-teaser-ctf/candypop).
+
 ## Initial analysis
 
 Let's see what we've got ("hello world" is my input):
