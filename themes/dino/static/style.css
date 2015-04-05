@@ -192,6 +192,10 @@ article>header .title {
     margin-bottom: 4px;
 }
 
+article>header .title>a {
+    color: white;
+}
+
 article>header time {
     display: block;
 	color: rgb(255, 232, 0);
@@ -235,10 +239,6 @@ article.index>header .category {
     margin-top: 4px;
     margin-left: 48px;
     font-size: 12px;
-}
-
-article.index>header>.title>a {
-	color:white;
 }
 
 /* Sidebar (general) */

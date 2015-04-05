@@ -2,10 +2,10 @@
 {% block content %}
 <header>Archives for {{ SITENAME }}</header>
 
-<dl>
 {% for article in dates %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+<article class="index">
+    {% include "article-header.html" %}
+</article>
 {% endfor %}
-</dl>
+
 {% endblock %}

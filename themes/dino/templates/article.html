@@ -16,26 +16,7 @@
 
 {% block content %}
 <article class="article">
-    <header>
-        {% if 'ctf' in article.tags %}
-        <span class="glyphicon glyphicon-flag"></span>
-        {% else %}
-        <span class="glyphicon glyphicon-globe"></span>
-        {% endif %}
-        <time>{{ article.locale_date }}</time>
-        <div class="title">
-            {% if 'ctf' in article.tags %}
-            Write-up:
-            {% endif %}
-            {{ article.title }}
-        </div>
-        <div class="category">
-            <a href="{{ SITEURL }}/{{ article.category.url }}">
-                {{ article.category.name }}
-            </a>
-        </div>
-    </header>
-
+    {% include "article-header.html" %}
     <div class="entry-content">
         {{ article.content }}
     </div>

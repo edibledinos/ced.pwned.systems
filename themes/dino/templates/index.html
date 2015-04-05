@@ -7,27 +7,7 @@
 
 {% for article in articles_page.object_list %}
 <article class="index">
-    <header>
-        {% if 'ctf' in article.tags %}
-        <span class="glyphicon glyphicon-flag"></span>
-        {% else %}
-        <span class="glyphicon glyphicon-globe"></span>
-        {% endif %}
-        <time>{{ article.locale_date }}</time>
-        <div class="title">
-            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title|striptags }}">
-                {% if 'ctf' in article.tags %}
-                Write-up:
-                {% endif %}
-                {{ article.title }}
-            </a>
-        </div>
-        <div class="category">
-            <a href="{{ SITEURL }}/{{ article.category.url }}">
-                {{ article.category.name }}
-            </a>
-        </div>
-    </header>
+    {% include "article-header.html" %}
 </article>
 {% endfor %}
 
