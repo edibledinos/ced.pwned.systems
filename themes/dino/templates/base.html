@@ -38,21 +38,21 @@
     {% endblock head %}
 </head>
 
-<body id="index" class="home">
+<body>
     <div class="wrapper">
-        <div id="page-header"><a href="{{ SITEURL }}/">{{ SITENAME.upper() }}</a></div>
+        <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
 
         <main role="main">
-            <section id="content">
+            <section>
                 {% block content %}
                 {% endblock %}
             </section>
         </main>
 
-        <aside class="sidebar" role="complementary">
+        <aside role="complementary">
             {% block sidebar %}
-            <section class="menu">
-                <header>{MENU}</header>
+            <section id="menu">
+                <header>Menu</header>
                 <ul>
                     {% for p in PAGES %}
                     <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
@@ -60,8 +60,8 @@
                 </ul>
             </section>
 
-            <section class="links">
-                <header>{LINKS}</header>
+            <section id="links">
+                <header>Links</header>
                 <ul>
                     {% for title, url in LINKS %}
                     <li><a href="{{ url }}">{{ title }}</a></li>
@@ -69,8 +69,8 @@
                 </ul>
             </section>
 
-            <section class="categories">
-                <header>{CTFS}</header>
+            <section id="categories">
+                <header>CTFs</header>
                 <ul>
                     {% for cat, null in categories %}
                     <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
@@ -82,18 +82,17 @@
 
         <div class="clear"></div>
 
-        <footer class="footer" role="contentinfo">
+        <footer role="contentinfo">
             <p>
                 &copy; 2015 o/ ced. Powered by <a href="http://getpelican.com/">Pelican</a>.
                 <small>(please don't hack us)</small>.
             </p>
         </footer>
-
     </div>
 
-    <div class="bg_main">
-        <div class="img_front"></div>
-        <div class="img_middle"></div>
+    <div class="bg-main">
+        <div class="img-front"></div>
+        <div class="img-middle"></div>
     </div>
 </body>
 </html>

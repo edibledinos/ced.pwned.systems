@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Archives for {{ period | reverse | join(' ') }}</h1>
+<header>Archives for {{ period | reverse | join(' ') }}</header>
 
 <dl>
 {% for article in dates %}
