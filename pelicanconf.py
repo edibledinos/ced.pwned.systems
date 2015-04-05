@@ -8,7 +8,7 @@ SITENAME = u'Certified Edible Dinosaurs'
 SITEURL = ''
 
 PATH = 'content'
-STATIC_PATHS = ['downloads']
+STATIC_PATHS = ['downloads', 'images']
 
 TIMEZONE = 'Europe/Amsterdam'
 
@@ -30,8 +30,9 @@ ARCHIVES_SAVE_AS = 'archive/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/{date:%m}/index.html'
 
+
 CATEGORY_THUMBNAILS = {
-    'hitb-2015-teaser-ctf': 'img/hitb-2015-teaser-ctf.png',
+    'hitb-2015-teaser-ctf': 'hitb-2015-teaser-ctf.png',
 }
 
 MD_EXTENSIONS = [

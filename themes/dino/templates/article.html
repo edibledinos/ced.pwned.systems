@@ -33,8 +33,7 @@
         </header>
 
         {% if CATEGORY_THUMBNAILS.get(article.category.slug) %}
-        <p><img src="{{ SITEURL }}/theme/{{ CATEGORY_THUMBNAILS[article.category.slug] }}"
-                class="sidebar_thumbnail"
+        <p><img src="{{ SITEURL }}/images/category/{{ CATEGORY_THUMBNAILS[article.category.slug] }}"
                 alt="{{ article.category.name }}"/></p>
         {% endif %}
 
