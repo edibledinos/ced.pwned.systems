@@ -99,6 +99,7 @@ h1, h2, h3, h4, h5 {
 pre {
     font-size: 14px;
     margin: 0;
+    white-space: pre-wrap;
 }
 
 .highlight {
