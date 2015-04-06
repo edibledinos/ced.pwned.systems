@@ -31,7 +31,7 @@ Let's have a quick look at the binary, shall we?
 
 So, no ASLR for the main executable, non executable stack and 3 exported functions: main, sample and test. Let's take a look at the disassembly of those functions. The annotations in the output are mine.
 
-    :::asm
+    :::nasm
     $ pwny symbol-disasm echo main
     push ebp
     mov ebp,esp
