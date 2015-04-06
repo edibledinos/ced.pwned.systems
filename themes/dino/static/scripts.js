@@ -1,3 +1,15 @@
+$.fn.rotate = function(start, stop) {
+    return this.each(function() {
+        var elem = $(this);
+        $({rotate: start}).animate({rotate: stop}, {
+            step: function(state) {
+                elem.css('transform', 'rotate(' + state + 'deg)');
+            }
+        });
+    });
+};
+
+
 (function ($, root, undefined) {
     $(function () {
         'use strict';
@@ -5,7 +17,16 @@
         // DOM ready, take it away
 
         $('.menu-button').click(function() {
-            $('aside').toggleClass('collapsed');
+            var elem=$(this), aside = $('aside');
+            if(aside.hasClass('collapsed')) {
+                elem.rotate(0, 180);
+                aside.hide().removeClass('collapsed').show(400);
+            } else {
+                elem.rotate(180, 360);
+                aside.hide(400, function() {
+                    aside.addClass('collapsed').css('display', '');
+                });
+            }
         });
 
         $(document).mousemove(function(event) {
