@@ -134,6 +134,26 @@ aside {
     float: right;
 }
 
+.menu-button {
+    display: none;
+}
+
+@media all and (max-width: 1024px) {
+    .menu-button {
+        display: inline;
+    }
+
+    .collapsed {
+        display: none;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
 /* Page header */
 
 .wrapper>h1 {
