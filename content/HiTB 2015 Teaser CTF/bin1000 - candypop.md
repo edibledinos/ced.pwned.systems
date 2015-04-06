@@ -4,7 +4,7 @@ Date: 2015-03-29 17:34
 Tags: CTF
 
 
-Introduction
+## Introduction
 
 This is a write-up of the pwn1000 challenge (candypop) of the HITB 2015 Teaser CTF. Here's the original description of the challenge:
 
