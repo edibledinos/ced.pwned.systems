@@ -11,13 +11,7 @@
     <link rel='stylesheet' href="{{ SITEURL }}/theme/style.css" media='all' />
     <link rel='stylesheet' href="{{ SITEURL }}/theme/pygment.css" media='all' />
     <script src="{{ SITEURL }}/theme/jquery-1.11.2.min.js"></script>
-    <script>
-        $(function() {
-            $('.menu-button').click(function() {
-                $('aside').toggleClass('collapsed');
-            })
-        })
-    </script>
+    <script src="{{ SITEURL }}/theme/scripts.js"></script>
 
     {% if FEED_ALL_ATOM %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
