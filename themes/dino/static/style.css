@@ -88,6 +88,7 @@ pre {
     font-size: 14px;
     margin: 0;
     white-space: pre-wrap;
+    overflow: scroll;
 }
 
 .highlight {
