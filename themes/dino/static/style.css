@@ -261,6 +261,12 @@ article.index>header .category {
     font-size: 12px;
 }
 
+/* Articles (on article page) */
+
+article.article>header .title>a {
+    font-weight: normal;
+}
+
 /* Sidebar (general) */
 
 aside {
