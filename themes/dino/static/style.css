@@ -14,8 +14,8 @@
 *,
 *:after,
 *:before {
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -82,14 +82,14 @@ aside {
 
 .clear:before,
 .clear:after {
-    content:' ';
-    display:table;
+    content: ' ';
+    display: table;
 }
 .clear:after {
-    clear:both;
+    clear: both;
 }
 .clear {
-    *zoom:1;
+    *zoom: 1;
 }
 
 /* General styling */
@@ -101,37 +101,24 @@ img {
 
 a {
     color: rgb(255, 232, 0);
-    text-decoration:none;
+    text-decoration: none;
     font-weight: bold;
 }
 a:hover {
-    text-decoration:underline;
-    color:white;
+    text-decoration: underline;
+    color: white;
 }
 a:focus, a:hover, a:active {
-    outline:0;
+    outline: 0;
 }
 
 input:focus {
-    outline:0;
-    border:1px solid #04A4CC;
+    outline: 0;
+    border: 1px solid #04A4CC;
 }
 
 h1, h2, h3, h4, h5 {
-    margin:0;
-}
-
-pre {
-    font-size: 14px;
     margin: 0;
-    white-space: pre-wrap;
-    overflow: scroll;
-}
-
-.highlight {
-    border-radius: 6px;
-    padding: 0.75em 1em;
-    margin: 1em 0;
 }
 
 ::selection {
@@ -233,8 +220,24 @@ article>header .category {
     font-weight: bold;
 }
 
-article>header .category a {
+article>header .category>a {
     text-decoration: underline;
+}
+
+article blockquote, article pre {
+    font-size: 14px;
+}
+
+article pre {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
+article .highlight {
+    border-radius: 6px;
+    padding: 5px 11px;
+    margin: 6px 0;
 }
 
 /* Articles (on index page) */
