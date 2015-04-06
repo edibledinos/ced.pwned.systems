@@ -33,8 +33,8 @@
         </header>
 
         {% if CATEGORY_THUMBNAILS.get(article.category.slug) %}
-        <p><img src="{{ SITEURL }}/images/category/{{ CATEGORY_THUMBNAILS[article.category.slug] }}"
-                alt="{{ article.category.name }}"/></p>
+        <figure><img src="{{ SITEURL }}/images/category/{{ CATEGORY_THUMBNAILS[article.category.slug] }}"
+                alt="{{ article.category.name }}"/></figure>
         {% endif %}
 
         <h4>Write-ups:</h4>
