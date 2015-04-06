@@ -42,13 +42,6 @@
     <div class="wrapper">
         <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
 
-        <main role="main">
-            <section>
-                {% block content %}
-                {% endblock %}
-            </section>
-        </main>
-
         <aside role="complementary">
             {% block sidebar %}
             <section id="menu">
@@ -79,6 +72,13 @@
             </section>
             {% endblock %}
         </aside>
+
+        <main role="main">
+            <section>
+                {% block content %}
+                {% endblock %}
+            </section>
+        </main>
 
         <div class="clear"></div>
 

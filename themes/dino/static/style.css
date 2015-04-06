@@ -68,10 +68,7 @@ a:hover {
     text-decoration:underline;
     color:white;
 }
-a:focus {
-	outline:0;
-}
-a:hover, a:active {
+a:focus, a:hover, a:active {
     outline:0;
 }
 
@@ -117,15 +114,24 @@ pre {
 	text-shadow:none;
 }
 
-/* Content wrapper */
+/* Layout */
 
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    position: relative;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0 60px;
+    height: auto;
+}
+
+main {
+    width: auto;
     overflow: hidden;
+}
+
+aside {
+    margin-left: 20px;
+    width: 280px;
+    float: right;
 }
 
 /* Page header */
@@ -134,7 +140,6 @@ pre {
     padding: 40px;
     font-size: 12px;
     font-family: sans-serif;
-    height: 80px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -147,11 +152,8 @@ pre {
 /* Main content */
 
 main {
-    width: 800px;
-    margin: 10px 20px 10px 0;
     padding: 30px 40px 10px;
     border-radius: 4px;
-    float: left;
     background: black url('img/container_pixel.png');
 }
 
@@ -233,9 +235,6 @@ article.index>header .category {
 /* Sidebar (general) */
 
 aside {
-	float: left;
-	width: 268px;
-	margin-top: 10px;
 	background-color: black;
     padding: 20px 10px 10px;
     border-radius: 6px;
