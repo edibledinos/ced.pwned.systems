@@ -307,6 +307,10 @@ aside>section>header::after {
     content: "}";
 }
 
+aside>section>p {
+    margin: 16px 20px 8px;
+}
+
 /* Sidebar (category specific) */
 
 aside>section#category {
