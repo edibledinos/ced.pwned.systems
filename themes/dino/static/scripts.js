@@ -34,5 +34,16 @@ $.fn.rotate = function(start, stop) {
             $('.img-front').css('background-position-x', '-' + (offset / 10) + 'px');
             $('.img-middle').css('background-position-x', '-' + (offset / 15) + 'px');
         });
+
+        if($('aside>section#category').length == 0) {
+            $('aside').append(
+                $('<section>').attr('id', 'jargon').append(
+                    $('<header>').append(
+                        $('<a>').attr('href', 'http://shinytoylabs.com/jargon/').text('!')
+                    ),
+                    $('<p>').text(jargon.generate())
+                )
+            );
+        }
     });
 })(jQuery, this);
