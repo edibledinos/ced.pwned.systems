@@ -52,7 +52,7 @@ Ok, it leaks a pointer to the code segment. That's good fun and all but pretty u
 
 Now let's look at the main function. It starts by setting up a jump table at esp+0x30 starting with a function that prints an error message about the email address not containing an '@' symbol. It uses fgets to read your name to esp+0x58 at a maximum of 0x20 characters, that's not very useful. It uses scanf("%s") to read the email address to esp+0x10. We can use that to overwrite the first entry of the jump table at esp+0x30 and jump to the flag reading function.
 
-So, we first write 0x58-0x30 = 32 bytes of A's and then the pointer value of the flag reading function.
+So, we first write 0x30-0x10 = 32 bytes of A's and then the pointer value of the flag reading function.
 
     #!/usr/bin/env python
     from pwny import *
