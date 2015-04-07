@@ -282,6 +282,10 @@ aside a {
     color:white;
 }
 
+aside>section>header>a {
+    color: rgb(255, 232, 0);
+}
+
 aside .glyphicon {
     color: rgb(255, 232, 0);
 }
