@@ -329,10 +329,6 @@ aside>section#category>header::after {
     content: "";
 }
 
-aside>section#category>header>.glyphicon {
-    float: left;
-}
-
 aside>section#category a {
 	color: rgb(255, 232, 0);
 	font-size:16px;
