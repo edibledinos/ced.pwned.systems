@@ -60,7 +60,7 @@ aside {
 
 .wrapper>h1>.action {
     float: right;
-    margin: 0em 0.5em;
+    margin: 0 0.5em;
 }
 
 /* Sidebar collapsing based on media query. */
@@ -69,9 +69,9 @@ aside {
     display: none;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (orientation: portrait) and (max-width: 1024px) {
     .menu-button {
-        display: inline;
+        display: inline-block;
     }
 
     .collapsed {
@@ -82,6 +82,16 @@ aside {
         float: none;
         width: 100%;
         margin: 0 0 20px 0;
+    }
+}
+
+@media all and (orientation: landscape) and (max-width: 1024px) {
+    .menu-button {
+        display: inline-block;
+    }
+
+    .collapsed {
+        display: none;
     }
 }
 
