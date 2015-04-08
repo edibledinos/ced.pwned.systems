@@ -4,6 +4,7 @@
     {% block head %}
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
 
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Cousine' media='all' />
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Inconsolata' media='all' />
@@ -45,7 +46,7 @@
     <div class="wrapper">
         <h1>
             <a href="{{ SITEURL }}/">{{ SITENAME }}</a>
-            <span class="menu-button action glyphicon glyphicon-chevron-down"></span>
+            <span class="collapse-button action glyphicon glyphicon-chevron-down"></span>
             <a class="action" href="{{ SITEURL }}/dino.html"><span class="glyphicon glyphicon-play"></span></a>
         </h1>
 

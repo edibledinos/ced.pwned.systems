@@ -16,7 +16,7 @@ $.fn.rotate = function(start, stop) {
 
         // DOM ready, take it away
 
-        $('.menu-button').click(function() {
+        $('.collapse-button').click(function() {
             var elem=$(this), aside = $('aside');
             if(aside.hasClass('collapsed')) {
                 elem.rotate(0, 180);
