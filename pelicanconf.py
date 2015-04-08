@@ -40,6 +40,8 @@ MD_EXTENSIONS = [
     'extra',
 ]
 
+TYPOGRIFY = True
+
 # Blogroll
 LINKS = (('pwnypack', 'https://github.com/edibledinos/pwnypack'),
          ('cuckoo sandbox', 'http://www.cuckoosandbox.org/'),)
