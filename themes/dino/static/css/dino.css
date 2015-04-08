@@ -1,0 +1,76 @@
+* {
+    font-family: 'Inconsolata';
+}
+
+body {
+    margin: 0;
+    background: -webkit-linear-gradient(#67329a, #401d61); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#67329a, #401d61); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#67329a, #401d61); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#67329a, #401d61); /* Standard syntax */
+}
+
+.content {
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(1, 1, 1, 0.5);
+    border-radius: 10px;
+}
+
+pre {
+    margin: 0 0 1em;
+}
+
+pre.logo {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.caret {
+    background-color: white;
+}
+
+.console {
+    visibility: hidden;
+}
+
+.img-dino {
+    width: 510px;
+    height: 558px;
+    background-size: contain;
+    background: url('../img/dinolol.png') no-repeat;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    z-index: -1;
+}
+
+.img-front {
+    width: 100%;
+    height: 480px;
+    background: url('../img/footer_roofs_front.png') repeat-x;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.img-middle {
+    width: 100%;
+    height: 480px;
+    background: url('../img/footer_roofs_middle.png') repeat-x;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+img.snowfall-flakes {
+    opacity: 0.3;
+}
