@@ -45,5 +45,14 @@ $.fn.rotate = function(start, stop) {
                 )
             );
         }
+
+        // Pulse play button color
+        setInterval(function() {
+            $('#playdino').animate({
+                color: '#ffe800'
+            }, 750).animate({
+                color: '#ffffff'
+            }, 750);
+        }, 5000);
     });
 })(jQuery, this);
