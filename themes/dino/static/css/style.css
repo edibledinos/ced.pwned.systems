@@ -58,6 +58,13 @@ aside {
     float: right;
 }
 
+.wrapper>h1>.action {
+    float: right;
+    margin: 0em 0.5em;
+}
+
+/* Sidebar collapsing based on media query. */
+
 .menu-button {
     display: none;
 }
@@ -140,7 +147,7 @@ h1, h2, h3, h4, h5 {
 /* Page header */
 
 .wrapper>h1 {
-    padding: 40px;
+    padding: 40px 0 40px 40px;
     font-size: 12px;
     font-family: sans-serif;
     text-decoration: none;
@@ -148,11 +155,7 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
 }
 
-.wrapper>h1>a {
-    color: white;
-}
-
-.wrapper>h1 .glyphicon {
+.wrapper>h1 a, .wrapper>h1 .glyphicon {
     color: white;
 }
 
