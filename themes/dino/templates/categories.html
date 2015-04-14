@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ SHORT_SITENAME }} - Categories{% endblock %}
+{% block content %}
+    <header>Categories on {{ SITENAME }}</header>
+    <ul>
+    {% for cat, articles in categories|sort %}
+        <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
