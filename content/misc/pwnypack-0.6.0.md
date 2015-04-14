@@ -18,7 +18,6 @@ Here's what has changed:
 * A reghex compiler.
 * Verifying ROP gadget finder.
 * Disassembler functionality (based on ndisasm or capstone).
-* A more
 * The ability to redirect stderr to stdout in flow.ProcessChannel.
 * The ability to create symlinks for commandline apps.
 * New commandline apps:
