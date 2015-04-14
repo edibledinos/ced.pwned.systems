@@ -75,7 +75,9 @@
                 <header>CTFs</header>
                 <ul>
                     {% for cat, null in categories %}
-                    <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                        {% if cat != 'misc' %}
+                            <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </section>
