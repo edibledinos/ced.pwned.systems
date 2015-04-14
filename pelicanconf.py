@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'CED'
 SITENAME = u'Certified Edible Dinosaurs'
+SHORT_SITENAME = u'CED'
 SITEURL = ''
 
 PATH = 'content'

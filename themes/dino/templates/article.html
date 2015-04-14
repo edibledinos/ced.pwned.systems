@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ SHORT_SITENAME }} - {{ article.title|striptags }}{% endblock %}
 {% block head %}
     {{ super() }}
     {% for keyword in article.keywords %}

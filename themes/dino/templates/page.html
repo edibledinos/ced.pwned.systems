@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{%endblock%}
+{% block title %}{{ SHORT_SITENAME }} - {{ page.title|striptags }}{%endblock%}
 {% block content %}
 <article class="page">
     <header>
