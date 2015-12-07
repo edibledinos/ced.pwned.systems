@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.dirname(__file__))
 from pelicanconf import *
 
-SITEURL = 'http://ced.pwned.systems'
+SITEURL = 'https://ced.pwned.systems'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
