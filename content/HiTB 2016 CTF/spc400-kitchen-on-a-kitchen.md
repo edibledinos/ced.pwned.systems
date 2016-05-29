@@ -19,7 +19,7 @@ I've created a mirror [here]({filename}/downloads/hitb-2016-ctf/spc400/live/inde
 
 Opening the challenge's web page show us a very retro-looking screen that builds up slowly so it's probably some form of emulator or virtual machine that runs in javascript. Once you enter 8 characters you'll see 'CODE WRONG'.
 
-Looking at the source (take a peek at [core2.js]({filename}downloads/hitb-2016-ctf/spc400/live/core2.js)) confirms this is an emulator but the source is quite obfuscated: most variable names are replaced with large chains of kitchen instruments and ingredients. I chose to manually reverse engineer some proper variable names and ended up with this [cleaned up version]({filename}/downloads/hitb-2016-ctf/spc400/live/core2_clean.js).
+Looking at the source (take a peek at [core2.js]({filename}/downloads/hitb-2016-ctf/spc400/live/core2.js)) confirms this is an emulator but the source is quite obfuscated: most variable names are replaced with large chains of kitchen instruments and ingredients. I chose to manually reverse engineer some proper variable names and ended up with this [cleaned up version]({filename}/downloads/hitb-2016-ctf/spc400/live/core2_clean.js).
 
 ## Exploitation
 
