@@ -109,7 +109,7 @@ Now, we run this for every permutation of the registers we want to save (`rax`, 
     for save_regs in itertools.permutations(['rdx', 'rax', 'rdi', 'rsi']):
 	    find_solution(save_regs)
 
-You can find the full script [here]({filename}/downloads/hitb-2016-ctf/bin100/find_register_solution.py).
+You can find the full script [here]({filename}/downloads/hitb-2016-ctf/bin100/find_shortest_path.py).
 
 This gives us a number of solutions, the shortest being:
 
