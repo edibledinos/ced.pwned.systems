@@ -15,6 +15,8 @@ TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = u'en'
 
+READERS = {'html': None}
+
 THEME = 'themes/dino'
 
 # Feed generation is usually not desired when developing
