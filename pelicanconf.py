@@ -34,6 +34,7 @@ MONTH_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/{date:%m}/index.html'
 
 CATEGORY_THUMBNAILS = {
     'hitb-2015-teaser-ctf': 'hitb-2015-teaser-ctf.png',
+    'hitb-2016-ctf': 'hitb-2016-ctf.png',
 }
 
 MD_EXTENSIONS = [
