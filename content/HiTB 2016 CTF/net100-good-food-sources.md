@@ -16,7 +16,7 @@ Tags: CTF
 
 ## Analysis
 
-We get a pcap file which shows traffic from a client (10.0.0.3) communicating with two glusterfs servers (10.0.0.1 and 10.0.0.2). Having never dealt with the glusterfs protocol (and not particularly caring about it either), instead of going on a google frenzy I looked at the protocol. It seems to be a relatively protocol where VFS ops are just RPC calls. To create a new file, you call the CREATE function and then call the WRITE function for each chunk. Now, there are two difficulties here. First: The WRITE calls are larger than a single TCP packet so we'll need to reassemble those. Second: It's a cluster filesystem and data gets written in a striped fashion to two different servers in chunks of 131072 bytes so we'll have to adjust for that.
+We get a pcap file which shows traffic from a client (10.0.0.3) communicating with two glusterfs servers (10.0.0.1 and 10.0.0.2). Having never dealt with the glusterfs protocol (and not particularly caring about it either), instead of going on a google frenzy I looked at the protocol. It seems to be a relatively straight-forward protocol where VFS ops are just RPC calls. To create a new file, you call the CREATE function and then call the WRITE function for each chunk. Now, there are two difficulties here. First: The WRITE calls are larger than a single TCP packet so we'll need to reassemble those. Second: It's a cluster filesystem and data gets written in a striped fashion to two different servers in chunks of 131072 bytes so we'll have to adjust for that.
 
 ## Exploitation
 
