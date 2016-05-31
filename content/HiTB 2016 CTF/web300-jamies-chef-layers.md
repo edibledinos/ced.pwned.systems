@@ -15,7 +15,7 @@ Download the web app's source [here]({filename}/downloads/hitb-2016-ctf/web300/r
 
 ## Analysis
 
-Another web challenge based on the Phalcon framework (just like last year's teaser [SATCOM]({filename}/HiTB 2015 Teaser CTF/web1000 - SATCOM.md).
+Another web challenge based on the Phalcon framework (just like last year's teaser [SATCOM]({filename}/HiTB 2015 Teaser CTF/web1000 - SATCOM.md)).
 
 Let's see what we've got. We are presented with a log-in screen, so let's try to log in. Click the forgot password link and you're presented with a hint that the administrator **dave** can create a login token for you. Let's see what we can find.
 
@@ -29,9 +29,9 @@ That looks like the filename of the latest release tarball of the the web applic
 	:::html
     <link href="/media/view/style.css" rel="stylesheet" type="text/css"/>
 
-If you click that link, you'll notice it starts with a header that contains the current time so it's probably dynamically generated. Try to use that to get the mysterious release-1.02.tgz file: http://145.111.225.36/media/view/release-1.02.tgz
+If you open that link, you'll see it starts with a header that contains the current time so it's probably dynamically generated. Try to use that to get the mysterious release-1.02.tgz file: http://145.111.225.36/media/view/release-1.02.tgz
 
-You'll notice you get an error message that you need to be authenticated. But that's what we're trying to crack. Let's see how well-protected this particular view is:
+You'll get an error message that you need to be authenticated. But that's what we're trying to crack. Let's see how well-protected this particular view is:
 
 	:::bash
     curl -H"Authenticated: yes" http://145.111.225.36/media/view/release-1.02.tgz
@@ -73,7 +73,7 @@ Very very safe token generation indeed. Concatenate the login name with its reve
 	print(make_token('dave'))
 
 
-Ok, now log in. We're now one step closer. Dave unfortunately doesn't have a high enough access level to read the secret recipe. Only Jamie does. And that level is so high, that you can't login using the password reset / token method (from *www/app/core/security/DefaultAuthenticationService.php*):
+Ok, now log in using the username *dave* and the generated token. We're now one step closer but unfortunately Dave doesn't have a high enough access level to read the secret recipe. Only Jamie does. And that level is so high, that you can't login using the password reset / token method (from *www/app/core/security/DefaultAuthenticationService.php*):
 
 	:::php
     <?php
