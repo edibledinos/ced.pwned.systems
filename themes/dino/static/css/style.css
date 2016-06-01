@@ -135,7 +135,8 @@ article pre {
 article pre {
     margin: 0;
     white-space: pre-wrap;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 article .highlight {
