@@ -16,7 +16,7 @@ This is a write-up for the for100 challenge of the HiTB 2016 CTF.
 > The chef stored his secret recipe encrypted on this server, we don't know if the attacker stole the recipe.
 Could you check if his secrets are safe?
 
-> Image file [here]({filename}/downloads/hitb-2016-ctf/ad30567ce980735e8c316f87b02e1235.img.xz). Pcap file [here]({filename}/downloads/hitb-2016-ctf/bin100/77590fce7ccc8a8b335bdcfb121e362a.pcap)
+> Image file [here]({filename}/downloads/hitb-2016-ctf/ad30567ce980735e8c316f87b02e1235.img.xz). Pcap file [here]({filename}/downloads/hitb-2016-ctf/77590fce7ccc8a8b335bdcfb121e362a.pcap)
 
 ## Analysis
 
