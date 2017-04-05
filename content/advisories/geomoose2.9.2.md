@@ -34,8 +34,9 @@ This one is easy.
     
     :::bash
     # Exploit Title: GeoMoose <= 2.9.2 Local File Disclosure
+    # Exploit Author: Sander 'dsc' Ferdinand
     # Date: 2017-03-4
-    # Author: Sander 'dsc' Ferdinand
+    # Version: <= 2.9.2
     # Blog: https://ced.pwned.systems
     # Vendor Homepage: geomoose.org
     # Reported: 4-3-2017
