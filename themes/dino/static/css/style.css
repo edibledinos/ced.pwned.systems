@@ -29,10 +29,10 @@ body {
     font: 300 16px/1 'Inconsolata', 'Courier New', Helvetica, Arial, sans-serif;
     color: white;
     margin: 0;
-    background: -webkit-linear-gradient(#2A003F, #401d61); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#2A003F, #401d61); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#2A003F, #401d61); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#2A003F, #401d61); /* Standard syntax */
+    background: -webkit-linear-gradient(#732f94, #401d61); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#732f94, #401d61); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#732f94, #401d61); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#732f94, #401d61); /* Standard syntax */
     min-height: 100%;
     display: block;
     overflow: auto;
@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5 {
 main, aside {
     padding: 2em;
     margin-top: 1em;
+    background: black;
 }
 
 main {
@@ -103,10 +104,10 @@ main>section>header {
 }
 
 article>header {
-	padding-bottom: 2.5em;
+	padding-bottom: 1.75em;
 }
 
-article>header .glyphicon {
+article>header .glyphicon, article>header .fa{
 	float: right;
 	font-size: 2.5em;
 }
@@ -118,7 +119,7 @@ article>header .title {
 article>header time {
     display: block;
 	font-family: sans-serif;
-	font-size: 0.75em;
+	font-size: 0.7em;
 }
 
 article>header .category {
@@ -147,21 +148,26 @@ article .highlight {
 
 /* Article layout (index pages) */
 
-article.index>header .glyphicon {
+article.index>header .glyphicon, article.index>header .fa {
     float: left;
 }
 
+article.index>header .fa {
+    padding-top:2px;
+}
+
 article.index>header .title {
-    font-size: 1.5em;
-    padding-left: 2.25em;
+    font-size: 1.35em;
+    padding-left: 2.5em;
 }
 
 article.index>header time {
 	padding-left: 4.5em;
+    float: right;
 }
 
-article.index>header .category {
-    padding-left: 4.5em;
+article.index>header .meta {
+    padding-left: 4.1em;
 }
 
 
@@ -204,10 +210,18 @@ aside>section#category li {
 
 /* General styling */
 
+code {
+    background-color: #222222;
+}
+
 main,
 aside {
     border-radius: 6px;
     background-image:  url('../img/container_pixel.png');
+}
+
+main {
+    background: rgba(0, 0, 0, 0.88) !important;
 }
 
 body,
@@ -222,6 +236,14 @@ aside>section#category>header {
 
 a,
 .glyphicon,
+article>header time,
+aside>section>header,
+aside>section#category a {
+    color: rgb(255, 232, 0);
+}
+
+a,
+.fa,
 article>header time,
 aside>section>header,
 aside>section#category a {
@@ -281,13 +303,15 @@ article>header time {
 	font-weight: bold;
 }
 
-article>header .category {
+article>header .meta {
+    font-size: 0.83em;
     -webkit-font-smoothing: antialiased;
-    font-weight: bold;
+    padding-top: 4px;
 }
 
-article>header .category>a {
+article>header .meta>a {
     text-decoration: underline;
+    font-weight: bold;
 }
 
 article .highlight {

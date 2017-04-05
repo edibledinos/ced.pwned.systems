@@ -1,6 +1,8 @@
 <header>
     {% if 'ctf' in article.tags %}
     <span class="glyphicon glyphicon-flag"></span>
+    {% elif 'advisory' in article.tags %}
+    <i class="fa fa-bug" aria-hidden="true"></i>
     {% else %}
     <span class="glyphicon glyphicon-globe"></span>
     {% endif %}
@@ -13,9 +15,12 @@
             {{ article.title }}
         </a>
     </div>
-    <div class="category">
-        <a href="{{ SITEURL }}/{{ article.category.url }}">
-            {{ article.category.name }}
-        </a>
+
+    <div class="meta">
+        {% import "_macros/author_fmt.html" as author_fmt %}
+        {% set author = MEMBER_GET(article.author) %}
+
+        Posted by {{ author_fmt.author_fmt(author) }} under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category.name }}</a>
     </div>
+
 </header>

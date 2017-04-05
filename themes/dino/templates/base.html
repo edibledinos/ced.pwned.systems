@@ -9,6 +9,7 @@
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Cousine' media='all' />
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Inconsolata' media='all' />
     <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css' media='all' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel='stylesheet' href="{{ SITEURL }}/theme/css/style.css" media='all' />
     <link rel='stylesheet' href="{{ SITEURL }}/theme/css/pygment.css" media='all' />
     <script src="{{ SITEURL }}/theme/js/jquery-1.11.2.min.js"></script>
@@ -56,6 +57,7 @@
             <section id="menu">
                 <header>Menu</header>
                 <ul>
+                    <li><a href="{{ SITEURL }}/members.html">Members</a></li>
                     {% for p in PAGES %}
                     <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
                     {% endfor %}
@@ -75,7 +77,7 @@
                 <header>CTFs</header>
                 <ul>
                     {% for cat, null in categories %}
-                        {% if cat != 'misc' %}
+                        {% if cat not in ['misc', 'advisories'] %}
                             <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                         {% endif %}
                     {% endfor %}
