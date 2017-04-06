@@ -149,6 +149,15 @@ article .highlight {
     margin: 1em 0;
 }
 
+article.article img.pull-left{
+    padding-right: 26px;
+    padding-bottom: 20px;
+}
+
+article.article img.pull-right{
+    padding-left: 26px;
+    padding-bottom: 20px;
+}
 
 /* Article layout (index pages) */
 

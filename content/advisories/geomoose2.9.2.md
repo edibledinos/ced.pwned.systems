@@ -1,7 +1,7 @@
 Title: GeoMoose <= 2.9.2 Local File Disclosure
 Author: dsc
 Date: 2017-03-7 11:12
-Tags: advisory, exploits
+Tags: advisory, exploits, responsible disclosure
 Slug: geomoose-local-file-disclosure-2-9-2
 
 ## Advisory

@@ -1,7 +1,7 @@
 Title: get-ipv4-by-asn.sh
 Author: dsc
 Date: 2017-1-7 11:10
-Tags: reconnaissance, bash
+Tags: reconnaissance, bash, tools
 Slug: get-ipv4-by-asn-sh
 
 Which ipv4 addresses belong to a given ASN? Use the following script:

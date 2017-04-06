@@ -1,7 +1,7 @@
 Title: Awstats Info Leak
 Author: dsc
 Date: 2017-03-7 11:12
-Tags: advisory, exploits
+Tags: advisory, exploits, tools
 
 ## Advisory
 
