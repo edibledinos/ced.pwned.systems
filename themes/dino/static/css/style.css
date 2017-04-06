@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5 {
 }
 
 main, aside {
-    padding: 2em;
+    padding: 1.3em;
     margin-top: 1em;
     background: black;
 }
@@ -75,6 +75,10 @@ footer {
 
 footer>p {
     font-size: 0.75em;
+}
+
+.highlight {
+    background: rgb(40, 40, 40) !important
 }
 
 
@@ -170,6 +174,9 @@ article.index>header .meta {
     padding-left: 4.1em;
 }
 
+article.index>header .tags{
+    display: none;
+}
 
 /* Sidebar layout (general) */
 
@@ -211,7 +218,12 @@ aside>section#category li {
 /* General styling */
 
 code {
-    background-color: #222222;
+    background-color: rgb(40, 40, 40);
+    font-size: 0.8em;
+    padding: 2px;
+    margin: 1px;
+    line-height: 20px;
+    color: #a6e22e;
 }
 
 main,
@@ -316,6 +328,9 @@ article>header .meta>a {
 
 article .highlight {
     border-radius: 6px;
+    line-height: 18px;
+    font-size: 0.8em;
+    margin-bottom: 2.5em;
 }
 
 

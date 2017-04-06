@@ -28,7 +28,7 @@ From these we can discover:
 
 To automate the  process of parsing large Awstats log files, use [awstats.py](https://github.com/skftn/awstats.py/).
 
-
+    :::bash
 	$ python awstats.py awstats012016.example.com.txt 
 
 	awstats log inspection on awstats042013.example.com.txt

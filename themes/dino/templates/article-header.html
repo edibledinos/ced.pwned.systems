@@ -21,6 +21,14 @@
         {% set author = MEMBER_GET(article.author) %}
 
         Posted by {{ author_fmt.author_fmt(author) }} under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category.name }}</a>
+        {% if article.tags %}
+        <span class="tags">
+        with tag(s)
+            {% for tag in article.tags %}
+                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>
+            {% endfor %}
+        </span>
+        {% endif %}
     </div>
 
 </header>
