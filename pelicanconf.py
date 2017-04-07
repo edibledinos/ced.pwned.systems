@@ -37,10 +37,17 @@ CATEGORY_THUMBNAILS = {
     'hitb-2016-ctf': 'hitb-2016-ctf.png',
 }
 
-MD_EXTENSIONS = [
-    'codehilite(css_class=highlight, guess_lang=False, linenums=False)',
-    'extra',
-]
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {
+            'css_class': 'highlight',
+            'guess_lang': False,
+            'linenums': False
+        },
+        'extra': {},
+    },
+    'output_format': 'html5',
+}
 
 MEMBERS = [
     {
