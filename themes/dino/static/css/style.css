@@ -336,7 +336,7 @@ article>header .meta>a {
 }
 
 article .highlight {
-    border-radius: 6px;
+    border-radius: 0px;
     line-height: 18px;
     font-size: 0.8em;
     margin-bottom: 2.5em;
