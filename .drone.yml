@@ -9,3 +9,5 @@ pipeline:
     dockerfile: Dockerfile
     registry: registry.thegraveyard.org
     secrets: [docker_username, docker_password]
+    when:
+      branch: master
