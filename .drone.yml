@@ -11,3 +11,10 @@ pipeline:
     secrets: [docker_username, docker_password]
     when:
       branch: master
+
+  deploy:
+    image: plugins/webhook
+    secrets: [webhook_username, webhook_password]
+    urls: https://deploy.thegraveyard.org/
+    when:
+      branch: master
