@@ -5,7 +5,7 @@ clone:
 pipeline:
   publish:
     image: plugins/docker
-    repo: registry.thegraveyard.org/ced-pwned-systems
+    repo: registry.thegraveyard.org/ced.pwned.systems
     dockerfile: Dockerfile
     registry: registry.thegraveyard.org
     secrets: [docker_username, docker_password]
