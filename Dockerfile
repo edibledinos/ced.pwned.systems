@@ -1,5 +1,5 @@
 FROM python:3.7 as build
-ARG SITEURL=https://ced.thegraveyard.org
+ARG SITEURL=https://ced.pwned.systems
 ENV HOME=/site
 ENV PATH=$PATH:/site/.local/bin
 WORKDIR /site
